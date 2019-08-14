@@ -4,7 +4,7 @@ Ansible playbook for creating a security group and deploying instances.
 ### Prerequisite:
 1. Install Ansible on an ec2 Instance and setup it as Ansible-master
 2. Python boto library
-3. Create an AMI Role with Policy AmazonEC2FullAccess and attach it to the Ansible master instance.
+3. Create an IAM Role with Policy AmazonEC2FullAccess and attach it to the Ansible master instance.
 
 Below is a simple playbook to deploy ec2 instances. The problem of the below playbook is, it will deploy instances again if you run the playbook multiple times. 
 ---
