@@ -29,11 +29,10 @@ Below is a simple playbook to deploy ec2 instances. The problem of the below pla
 
 ## An improved version of the playbook which creates a security group and deploy instances using that security group is given below.
 ----
-###### We can control the number of instances using the exact_count parameter. Here it is set as 2 and no matter how many times you run the playbook there will only be two instances running at same time. That means if we turn off one of the instance and run the playbook again, it will deploy a new ec2-instance using the instance tags given. This will make sure that the exact_count number of instances are currently running(Basis of given instance tag).
-
+#### We can control the number of instances using the exact_count parameter. Here it is set as 2 and no matter how many times you run the playbook there will only be two instances running at same time. That means if we turn off one of the instance and run the playbook again, it will deploy a new ec2-instance using the instance tags given. This will make sure that the exact_count number of instances are currently running(Basis of given instance tag).
 ---
 ---
-#### playbook file ec2-deploy.yml
+#### ec2-deploy.yml
 ```sh
 
 ---
@@ -91,8 +90,9 @@ Below is a simple playbook to deploy ec2 instances. The problem of the below pla
   keypair: jwl-PC # Select the key-pair which to be used
   exact_count:2  # Count of the instances, you can deploy more than 1 instances
   subnet: subnet-5074287e  # VPC subnet
+  ```
+  
 ---
-
 
 ##### Executing the playbook - # ansible-playbook ec2-deploy.yml
 
