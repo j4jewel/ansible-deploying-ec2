@@ -64,6 +64,10 @@ Below is a simple playbook to deploy ec2 instances. The problem of the below pla
              from_port: 80
              to_port: 80
              cidr_ip: 0.0.0.0/0
+           - proto: tcp
+             from_port: 443
+             to_port: 443
+             cidr_ip: 0.0.0.0/0
 
      - name: "Launching ec2 Instance"
        ec2:
